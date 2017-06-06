@@ -48,7 +48,7 @@ Handlebars.registerHelper('html', function (content) {
   return new Handlebars.SafeString(content)
 })
 
-fs.readFile('./source/index.md', 'utf8', function (err, content) {
+fs.readFile('./docsource/index.md', 'utf8', function (err, content) {
   if (err) console.log(err)
 
   content = content.split(/---/g)
@@ -92,13 +92,13 @@ fs.readFile('./source/index.md', 'utf8', function (err, content) {
     // create partials
     for (var i = 0; i < data.includes.length; i++) {
       var includeFileName = data.includes[i]
-      var includeFilePath = path.resolve(__dirname, 'source/includes', includeFileName + '.md')
+      var includeFilePath = path.resolve(__dirname, '../docsource', includeFileName + '.md')
       var includeContent = fs.readFileSync(includeFilePath, {encoding: 'utf8'})
       var markedInclude = marked(includeContent)
       Handlebars.registerPartial(includeFileName, markedInclude)
     }
   }
-  fs.readFile('./source/layouts/layout.html', 'utf8', function (err, source) {
+  fs.readFile('./docs/layouts/layout.html', 'utf8', function (err, source) {
     if (err) console.log(err)
 
     if (data.includes) {
@@ -114,7 +114,7 @@ fs.readFile('./source/index.md', 'utf8', function (err, content) {
 
     data['content'] = marked(content.slice(2).join(''))
 
-    fs.writeFile('./source/index.html', template(data), function (err) {
+    fs.writeFile('./docs/index.html', template(data), function (err) {
       if (err) console.log(err)
     })
   })

@@ -17,7 +17,7 @@
           var langs = [];
           {{#each language_tabs}}
             langs.push({{{str this.name}}});
-          {{/each}}          
+          {{/each}}
           setupLanguages( langs );
         });
       </script>
@@ -50,17 +50,9 @@
         </ul>
     </div>
     <div class="page-wrapper">
-      <div class="dark-box"></div>
         <div class="content">
           {{{html content}}}
         </div>
-      <div class="dark-box">
-          <div class="lang-selector">
-              {{#each language_tabs}}
-              <a href="#" data-language-name="{{this.name}}">{{this.text}}</a>
-              {{/each}}
-          </div>
-      </div>
     </div>
   </body>
 </html>
