@@ -2,8 +2,7 @@
 title: API Reference
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - Developed by <img style="vertical-align: middle" src="images/volicon_verizon_dm.png" href='#'/>
 
 includes:
   - _errors
@@ -11,10 +10,9 @@ includes:
 search: true
 ---
 
-
-
-
 # Introduction
+
+![logo](images/volicon_verizon_dm.png)
 
 Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
