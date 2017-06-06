@@ -15,9 +15,6 @@
       <script>
         $(function() {
           var langs = [];
-            langs.push("shell");
-            langs.push("ruby");
-            langs.push("python");
           setupLanguages( langs );
         });
       </script>
@@ -33,9 +30,6 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell"> cURL</a>
-              <a href="#" data-language-name="ruby"> Ruby</a>
-              <a href="#" data-language-name="python"> Python</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -62,14 +56,6 @@
 
 api = <span class="hljs-constant">Kittn::APIClient</span>.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
 </code></pre>
-<pre><code class="highlight python"><span class="hljs-keyword">import</span> kittn
-
-api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
-</code></pre>
-<pre><code class="highlight shell"><span class="hljs-comment"># With shell, you can just pass the correct header with each request</span>
-curl <span class="hljs-string">"api_endpoint_here"</span>
-  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
-</code></pre>
 <blockquote>
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
 </blockquote>
@@ -82,6 +68,11 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 <h1 id="kittens">Kittens</h1>
 <h2 id="get-all-kittens">Get All Kittens</h2>
+<h3 id="-static-record-set-options-options-"><code>static</code> record.set( options : <code>options</code> )</h3>
+<blockquote>
+<p>Blockquote</p>
+</blockquote>
+<h4 id="fourth-level">Fourth level</h4>
 <pre><code class="highlight ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'kittn'</span>
 
 api = <span class="hljs-constant">Kittn::APIClient</span>.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)

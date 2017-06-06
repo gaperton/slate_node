@@ -1,11 +1,6 @@
 ---
 title: API Reference
 
-language_tabs:
-  - shell: cURL
-  - ruby: Ruby
-  - python: Python
-
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
@@ -37,18 +32,6 @@ require 'kittn'
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 ```
 
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
 > Make sure to replace `meowmeowmeow` with your API key.
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
@@ -64,6 +47,12 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 # Kittens
 
 ## Get All Kittens
+
+### `static` record.set( options : `options` )
+
+> Blockquote
+
+#### Fourth level
 
 ```ruby
 require 'kittn'
@@ -168,4 +157,3 @@ This endpoint retrieves a specific kitten.
 Parameter | Description
 ---- | ----
 ID | The ID of the kitten to retrieve
-
