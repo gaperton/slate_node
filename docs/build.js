@@ -111,7 +111,7 @@ fs.readFile('./docsource/index.md', 'utf8', function (err, content) {
     }
 
     var template = Handlebars.compile(source)
-
+    console.log( data.toc_footers );
     data['content'] = marked(content.slice(2).join(''))
 
     fs.writeFile('./docs/index.html', template(data), function (err) {
